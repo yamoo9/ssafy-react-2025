@@ -1,0 +1,71 @@
+{
+  "search.exclude": {
+    "**/coverage": true,
+    "**/node_modules": true
+  },
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/node_modules": false,
+    "**/*.js.map": {
+      "when": "$(basename)"
+    }
+  },
+  
+  "emmet.variables": {
+    "charset": "UTF-8",
+    "lang": "ko-KR"
+  },
+  "emmet.includeLanguages": {
+    "markdown": "html",
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact"
+  },
+  "emmet.syntaxProfiles": {
+    "attr_case": "lower",
+    "attr_quotes": "double",
+    "self_closing_tag": "xhtml",
+    "tag_case": "lower",
+    "inline_break": 3,
+    "html": "xhtml",
+  },
+  "emmet.showExpandedAbbreviation": "always",
+  "emmet.showSuggestionsAsSnippets": true,
+  "emmet.triggerExpansionOnTab": true,
+  
+  "codeium.enableCodeLens": false,
+  "codeium.enableConfig": { 
+    "*": true,
+    "typescript": false,
+    "typescriptreact": false,
+  },
+
+  "tailwindCSS.classAttributes": [
+    "class",
+    "className",
+    "ngClass",
+    ".*Classes.*"
+  ],
+  // 참고: https://github.com/paolotiu/tailwind-intellisense-regex-list?tab=readme-ov-file#readme
+  "tailwindCSS.experimental.classRegex": [
+    ":\\s*?[\"'`]([^\"'`]*).*?,",
+    ["Styles\\s*(?::\\s*[^=]+)?\\s*=\\s*([^;]*);", "['\"`]([^'\"`]*)['\"`]"],
+    ["clsx\\(.*?\\)(?!\\])", "(?:'|\"|`)([^\"'`]*)(?:'|\"|`)"],
+    ["classnames\\(([^)]*)\\)", "[\"'`]([^\"'`]*)[\"'`]"],
+    ["(?:\\b(?:const|let|var)\\s+)?[\\w$_]*(?:[Ss]tyles|[Cc]lasses|[Cc]lassnames)[\\w\\d]*\\s*(?:=|\\+=)\\s*['\"]([^'\"]*)['\"]"]
+  ],
+  "tailwindCSS.emmetCompletions": true,
+  "tailwindCSS.includeLanguages": {
+    "javascriptreact": "html",
+    "plaintext": "html"
+  },
+  "tailwindCSS.experimental.configFile": "./src/styles/tailwind.css",
+  "tailwind-fold.foldStyle": "QUOTES",
+  "tailwind-fold.unfoldIfLineSelected": true,
+  "tailwind-fold.unfoldedTextOpacity": 0.9,
+  "tailwind-fold.autoFold": false,
+}
