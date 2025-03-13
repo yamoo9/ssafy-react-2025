@@ -1,9 +1,6 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom/client'
 
-// HTML =  hyper text markup language
-// JavaScript Markup = hyperscript
-
 const buttonElement = React.createElement('button', {
   type: 'button',
   className: 'button primary-button',
