@@ -1,25 +1,39 @@
-import * as React from 'react'
+import { createElement as h } from 'react'
 import * as ReactDOM from 'react-dom/client'
 
-// [TypeScript] React.ReactElement
-// JavaScript Library
+// HTML =  hyper text markup language
+// JavaScript Markup = hyperscript
 
-// Vue.js
-// Default Slot === children prop
-
-// <elementType prop1="value"></elementType>
-// <button type="button" class="button primary-button">리액트 버전 확인</button>
-const reactElement = React.createElement('button', {
+const buttonElement = h('button', {
   type: 'button',
   className: 'button primary-button',
   children: '리액트 버전 확인',
 })
 
-// DOM API
-// document.getElementById('idName')
+const navElement = h(
+  'nav',
+  null,
+  h('h2', { className: 'sr-only' }, '페이지 탐색 메뉴'),
+  h(
+    'ul',
+    null,
+    h(
+      'li',
+      null,
+      h(
+        'a',
+        {
+          href: '/products',
+        },
+        '상품 목록',
+      ),
+    ),
+  ),
+)
+
 const rootElement = document.getElementById('root')
 
 if (rootElement) {
   const reactDomRoot = ReactDOM.createRoot(rootElement)
-  reactDomRoot.render(reactElement)
+  reactDomRoot.render(navElement)
 }
