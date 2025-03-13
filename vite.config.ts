@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 
 const viteConfig = defineConfig({
+  base: '/',
   // dev server
   server: {
     port: 3000,
