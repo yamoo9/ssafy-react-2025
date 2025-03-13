@@ -1,6 +1,19 @@
 {
+  "type": "module",
   "name": "ssafy-react-2025",
   "description": "삼성 청년 아카데미 2025년 상반기 리액트 모듈형 특강",
   "version": "0.1.0",
-  "private": true
+  "private": true,
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "6.2.1"
+  },
+  "dependencies": {
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
+  }
 }
